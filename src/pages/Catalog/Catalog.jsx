@@ -9,7 +9,7 @@ export function Catalog() {
   const [showLoadMoreBtn, setShowLoadMoreBtn] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [, setError] = useState(null);
 
   useEffect(() => {
     const perPage = 8;
