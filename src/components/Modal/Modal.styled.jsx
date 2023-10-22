@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { PALETTE } from 'helpers/palette';
 
 export const ModalStyled = styled.div`
   max-width: calc(100vw - 48px);
@@ -14,6 +15,6 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${PALETTE.bgModalColor};
   z-index: 1200;
 `;

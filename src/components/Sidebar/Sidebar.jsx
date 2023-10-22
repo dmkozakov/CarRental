@@ -1,14 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Aside, Nav } from './Sidebar.styled';
+import { Aside, Logo, Nav, StyledLink } from './Sidebar.styled';
 
 export function Sidebar() {
   return (
     <Aside>
+      <Logo to="/">CarRental</Logo>
       <Nav>
-        <NavLink to="/">Homepage</NavLink>
-        <NavLink to="/catalog">Catalog</NavLink>
-        <NavLink to="/favorites">Favorites</NavLink>
+        <StyledLink to="/">Homepage</StyledLink>
+        <StyledLink to="/catalog">Catalog</StyledLink>
+        <StyledLink to="/favorites">Favorites</StyledLink>
       </Nav>
     </Aside>
   );

@@ -9,8 +9,10 @@ const useStore = create(
         isLoading: false,
         error: null,
         addFavorite: item =>
-          set(state => ({ favorite: [...state.favorite, item] })),
-        removeFavorite: id =>
+          set(state => ({
+            favorite: [...state.favorite, { ...item, favorite: true }],
+          })),
+        removeFavorite: ({ id }) =>
           set(state => ({
             favorite: state.favorite.filter(item => item.id !== id),
           })),
