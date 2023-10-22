@@ -4,11 +4,11 @@ import { PALETTE } from 'helpers/palette';
 export const CatalogWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 1184px;
 `;
 
 export const Button = styled.button`
+  align-self: center;
   margin-top: 100px;
 
   font-family: 'Manrope';

@@ -48,8 +48,12 @@ export const ImageBox = styled.div`
 
   overflow: hidden;
   border-radius: 14px;
-
-  background-color: ${PALETTE.bgMainColor};
+  background: linear-gradient(
+      180deg,
+      rgba(18, 20, 23, 0.5) 2.5%,
+      rgba(18, 20, 23, 0) 41.07%
+    ),
+    #f3f3f2;
 `;
 
 export const Image = styled.img`

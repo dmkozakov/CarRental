@@ -3,6 +3,8 @@ import { CatalogList } from 'components/CatalogList/CatalogList';
 import { fetchCars } from 'services/carRentalApi';
 import { toast } from 'react-toastify';
 import { Button, CatalogWrapper } from './Catalog.styled';
+import { Filter } from 'components/Filter/Filter';
+import { Loader } from 'components/Loader/Loader';
 
 export function Catalog() {
   const [cars, setCars] = useState([]);
@@ -39,16 +41,18 @@ export function Catalog() {
 
   return (
     <CatalogWrapper>
-      <div>
-        <h3>Filter</h3>
-      </div>
+      <Filter />
 
-      {isLoading ? 'Loading...' : <CatalogList list={cars} />}
+      {isLoading && page === 1 ? <Loader /> : <CatalogList list={cars} />}
 
-      {showLoadMoreBtn && (
-        <Button type="button" onClick={() => setPage(state => state + 1)}>
-          Load more
-        </Button>
+      {isLoading && page !== 1 ? (
+        <Loader />
+      ) : (
+        showLoadMoreBtn && (
+          <Button type="button" onClick={() => setPage(state => state + 1)}>
+            Load more
+          </Button>
+        )
       )}
     </CatalogWrapper>
   );

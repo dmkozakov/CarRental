@@ -10,3 +10,12 @@ export const fetchCars = async (page, perPage) => {
     console.log(error);
   }
 };
+
+export const fetchAllCars = async () => {
+  try {
+    const response = await axios.get('/adverts');
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

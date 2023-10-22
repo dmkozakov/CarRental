@@ -43,8 +43,6 @@ export function OrderModal({ item, onClose }) {
     rentalConditions,
   } = item;
 
-  console.log(item);
-
   const conditions = rentalConditions.split('\n');
   const city = address.split(', ').slice(1)[0];
   const country = address.split(', ').slice(2)[0];
