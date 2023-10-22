@@ -8,6 +8,8 @@ import { Loader } from 'components/Loader/Loader';
 
 export function Catalog() {
   const [cars, setCars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
+
   const [page, setPage] = useState(1);
   const [showLoadMoreBtn, setShowLoadMoreBtn] = useState(false);
 
@@ -39,11 +41,17 @@ export function Catalog() {
     })();
   }, [page]);
 
+  console.log(filteredCars);
+
   return (
     <CatalogWrapper>
-      <Filter />
+      <Filter filter={setFilteredCars} />
 
-      {isLoading && page === 1 ? <Loader /> : <CatalogList list={cars} />}
+      {isLoading && page === 1 ? (
+        <Loader />
+      ) : (
+        <CatalogList list={filteredCars.length ? filteredCars : cars} />
+      )}
 
       {isLoading && page !== 1 ? (
         <Loader />

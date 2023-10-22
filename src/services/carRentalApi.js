@@ -19,3 +19,4 @@ export const fetchAllCars = async () => {
     console.log(error);
   }
 };
+
