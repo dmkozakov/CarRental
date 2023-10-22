@@ -43,6 +43,7 @@ export function Filter() {
           onChange={console.log}
         />
       </FilterWrapper>
+      
       <FilterPriceWrapper>
         <InputLabel>Price/ 1 hour</InputLabel>
         <CustomSelect

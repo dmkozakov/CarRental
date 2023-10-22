@@ -64,10 +64,12 @@ export function CatalogItem({ item, favorites }) {
         <ImageBox>
           <Image src={`${img}`} alt={`${make} ${model}`} />
         </ImageBox>
+
         <TitleBox>
           <Title>
             {make} <Model>{model}</Model>, {year}
           </Title>
+
           <p>{rentalPrice}</p>
         </TitleBox>
 
@@ -94,11 +96,13 @@ export function CatalogItem({ item, favorites }) {
             <Tag>{country}</Tag>
             <Tag>{rentalCompany}</Tag>
           </TagsLine>
+
           <TagsLine>
             <Tag>{type}</Tag>
             <Tag>{model}</Tag>
             <Tag>{mileage}</Tag>
           </TagsLine>
+
           <TagsLine>
             <Tag>{functionalities[0]}</Tag>
           </TagsLine>

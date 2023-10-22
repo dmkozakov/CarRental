@@ -15,3 +15,11 @@ export const Title = styled.h2`
   text-shadow: 0px 9.399999618530273px 57.6875px rgba(0, 0, 0, 0.04),
     0px 47px 355px rgba(0, 0, 0, 0.07);
 `;
+
+export const Message = styled.p`
+  transform: translateY(200px);
+  font-family: 'Manrope';
+  font-size: 24px;
+
+  color: ${PALETTE.textSecondaryColor};
+`;
