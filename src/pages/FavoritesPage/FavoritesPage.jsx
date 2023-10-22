@@ -1,14 +1,15 @@
 import React from 'react';
 import useStore from '../../zustand/store';
 import { CatalogList } from 'components/CatalogList/CatalogList';
+import { Container } from 'pages/CatalogPage/CatalogPage.styled';
 
-export function Favorites() {
+export function FavoritesPage() {
   const favorite = useStore(state => state.favorite);
 
   return (
-    <div>
+    <Container>
       <h2>Favorites page</h2>
-      <CatalogList list={favorite} />
-    </div>
+      <CatalogList list={favorite} favorites />
+    </Container>
   );
 }

@@ -1,12 +1,12 @@
-import React from 'react';
 import { CatalogItem } from '../CatalogItem/CatalogItem';
+import { List } from './CatalogList.styled';
 
-export function CatalogList({ list }) {
+export function CatalogList({ list, favorites }) {
   return (
-    <ul>
+    <List>
       {list.map(car => (
-        <CatalogItem item={car} key={car.id} />
+        <CatalogItem item={car} key={car.id} favorites={favorites} />
       ))}
-    </ul>
+    </List>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CatalogList } from 'components/CatalogList/CatalogList';
 import { fetchCars } from 'services/carRentalApi';
 import { toast } from 'react-toastify';
+import { Button, CatalogWrapper } from './Catalog.styled';
 
 export function Catalog() {
   const [cars, setCars] = useState([]);
@@ -21,8 +22,6 @@ export function Catalog() {
         const data = await fetchCars(page, perPage);
         setShowLoadMoreBtn(true);
 
-        console.log(data);
-
         setCars(prev => [...prev, ...data]);
 
         if (data.length < perPage) {
@@ -39,16 +38,18 @@ export function Catalog() {
   }, [page]);
 
   return (
-    <div className="container">
-      <h2>Catalog page</h2>
+    <CatalogWrapper>
+      <div>
+        <h3>Filter</h3>
+      </div>
 
       {isLoading ? 'Loading...' : <CatalogList list={cars} />}
 
       {showLoadMoreBtn && (
-        <button type="button" onClick={() => setPage(state => state + 1)}>
+        <Button type="button" onClick={() => setPage(state => state + 1)}>
           Load more
-        </button>
+        </Button>
       )}
-    </div>
+    </CatalogWrapper>
   );
 }
