@@ -41,8 +41,6 @@ export function Catalog() {
     })();
   }, [page]);
 
-  console.log(filteredCars);
-
   return (
     <CatalogWrapper>
       <Filter filter={setFilteredCars} />
