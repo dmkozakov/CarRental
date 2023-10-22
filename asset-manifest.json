@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/car-rental/static/css/main.cfb450c7.css",
-    "main.js": "/car-rental/static/js/main.6ec529bc.js",
+    "main.js": "/car-rental/static/js/main.e3a68983.js",
+    "static/media/maserati.jpg": "/car-rental/static/media/maserati.f338923840e397596fa2.jpg",
     "static/media/Manrope-SemiBold.ttf": "/car-rental/static/media/Manrope-SemiBold.310f108cc524df0e5ffc.ttf",
     "static/media/Manrope-Medium.ttf": "/car-rental/static/media/Manrope-Medium.08894ccb04665d1a9d53.ttf",
     "static/media/Manrope-Regular.ttf": "/car-rental/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "index.html": "/car-rental/index.html",
     "static/media/icons.svg": "/car-rental/static/media/icons.7cad794e011e0c302036f493cb7b7e5c.svg",
     "main.cfb450c7.css.map": "/car-rental/static/css/main.cfb450c7.css.map",
-    "main.6ec529bc.js.map": "/car-rental/static/js/main.6ec529bc.js.map"
+    "main.e3a68983.js.map": "/car-rental/static/js/main.e3a68983.js.map"
   },
   "entrypoints": [
     "static/css/main.cfb450c7.css",
-    "static/js/main.6ec529bc.js"
+    "static/js/main.e3a68983.js"
   ]
 }
